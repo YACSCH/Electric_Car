@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 50px 1fr 80px;
+    grid-template-areas:
+    "nav"
+    "search"
+    "main"
+    "footer";
+    max-width: 100%;
+    min-height: 100vh;
+}
+nav {
+    grid-area: nav;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: center;
+    align-content: center;
+    padding-left: 10px ;
+    padding-right: 10px;
+  
+    background-color:#0367A6 ;
+}
+.nav-logo{
+    color:whitesmoke;
+    font-size: 20px;
+}
+.nav-icon{
+    color: whitesmoke;
+    font-size: 20px;
+}
+.menu-list{
+    display: none;
+}
+.search{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    grid-area: search;
+    background-color: #E3E3E2;
+}
+.search-text {
+    color: rgb(109, 106, 106);
+}
+.search-combo{
+    width: 200px;
+    height: 25px;
+    color: gray;
+}
+main{
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+}
+.card-section{
+    display: grid;
+    grid-template-columns: 1fr;
+   
+}
+.card-section-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    border: 2px solid #d4cfcf;
+    padding: 20px;
+    margin: 20px 40px;
+}
+.card-section-item img{
+    width: 100%;
+}
+.card-section-item p{
+    padding-top: 20px;
+}
+.card-section-item a{
+    text-decoration: none;
+    background-color:#0367A6 ;
+    border: 1px solid #0367A6;
+    color: whitesmoke;
+    padding: 8px;
+    border-radius:10px
+}
+.pagination {
+    
+  }
+.pagination-table, tr, td {
+    color: #4281EE;
+    border: 1px solid gray;
+    border-collapse: collapse;
+    padding: 8px;
+  }
+  
+footer{
+    grid-area: footer;
+    color: whitesmoke;
+    background-color: #023373;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+}
+.footer-icon {
+    font-size: 25px;
+}
+
