@@ -6,12 +6,13 @@
 
 .grid-container {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 50px 50px auto 80px;
+  grid-template-columns: auto;
+  grid-template-rows: auto 1fr auto auto auto;
   grid-template-areas:
     "nav"
     "aside"
     "main"
+    "page"
     "footer";
   width: 100vw;
   height: 100vh;
@@ -22,13 +23,12 @@ nav {
   justify-content: space-between;
   align-content: center;
   align-items: center;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding: 10px;
   background-color: #0367a6;
 }
 .nav-logo {
   color: whitesmoke;
-  font-size: 20px;
+  font-size: 1.2rem;
 }
 .nav-icon {
   color: whitesmoke;
@@ -61,26 +61,20 @@ main {
   grid-area: main;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
   margin-top: 10px;
-}
-.card-section {
- width: 90%;
- overflow-y: scroll;
+  overflow-y: scroll;
 }
 .card-section-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin : 10px;
+  margin : 15px;
   border: 1px solid #eae3e3;
   box-shadow: 1px 1px 10px 1px #b4c1d1;
 }
 .card-section-item img {
   width: 80%;
-  height: 340px;
+  height: 300px;
 }
 .card-section-item p {
   padding-top: 20px;
@@ -95,6 +89,8 @@ main {
   margin-bottom: 10px;
 }
 .pagination {
+    display: flex;
+    justify-content: center;
     padding: 20px;
 }
 .pagination-table,
@@ -117,18 +113,20 @@ footer {
   align-items: center;
   padding-bottom: 10px;
 }
+.pagination {
+  grid-area: page;
+}
 .footer-icon {
   font-size: 25px;
 }
 
 @media (min-width: 576px) {
   .grid-container {
-    grid-template-columns: 250px 1fr;
+    grid-template-columns: 20% 80%;
     grid-template-areas:
       "nav aside"
       "nav main"
-      "nav main"
-      "footer main";
+      "footer page";
   }
   nav {
     display: flex;
@@ -167,11 +165,10 @@ footer {
     flex-direction: row;
     justify-content: center;
     flex-wrap:wrap;
-    margin-left: 30px;
-  
+ 
   }
   .card-section-item {
-    width:340px;
+    width:320px;
   }
   .card-section-item img {
     width: 100%;
